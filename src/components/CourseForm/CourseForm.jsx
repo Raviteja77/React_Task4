@@ -29,7 +29,8 @@ function CourseForm() {
 		useSelector(getCourseAuthors)
 	);
 	const [createAuthor, setCreateAuthor] = useState('');
-	const [authorsList, setAuthorsList] = useState(useSelector(getAuthors));
+	const authorsFromStore = useSelector(getAuthors);
+	const [authorsList, setAuthorsList] = useState(authorsFromStore);
 	const [calculateDuration, setCalculateDuration] = useState('');
 	const [formDetails, setFormDetails] = useState({
 		id: '',
@@ -46,6 +47,10 @@ function CourseForm() {
 	);
 
 	const navigateToCourses = useNavigateToPage('/courses');
+
+	useEffect(() => {
+		setAuthorsList(authorsFromStore);
+	}, [authorsFromStore]);
 
 	// To prefill the data in the form if admin wants to update the form
 	useEffect(() => {
@@ -104,9 +109,7 @@ function CourseForm() {
 			}
 		});
 		if (flag) {
-			const id = 'id' + Math.random().toString(16).slice(2);
 			dispatch(saveAuthorInAllAuthors(createAuthor, userData.result));
-			setAuthorsList([...authorsList, { id: id, name: createAuthor }]);
 		}
 	};
 
