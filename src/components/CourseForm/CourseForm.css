@@ -1,0 +1,19 @@
+
+.create_course {
+    border: 2px solid #95CEE8;
+    margin: 1rem;
+}
+
+.main-content {
+    border: 1px solid #11110E;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.description {
+    margin: 1rem;
+}
+
+.description__text {
+    border: 2px solid #E5E078;
+}

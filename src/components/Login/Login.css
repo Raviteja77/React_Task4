@@ -1,0 +1,10 @@
+
+.login {
+    border: 2px solid #95CEE8;
+    padding: 1rem 25rem;
+    margin: 1rem;
+}
+
+.login * {
+    margin: 0.5rem 0;
+}

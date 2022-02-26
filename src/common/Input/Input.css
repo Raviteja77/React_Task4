@@ -1,0 +1,14 @@
+
+input[type='text'], input[type='number'], input[type='email'], input[type='password'] {
+    border: 2px solid #E5AE78;
+}
+
+.label-input {
+    flex: 0.8;
+}
+
+.icon {
+    position: absolute;
+    left: 92%;
+    top: 58%;
+}
